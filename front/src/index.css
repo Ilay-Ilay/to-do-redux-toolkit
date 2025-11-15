@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color */
+  --color-bg-1: #111;
+  --color-bg-2: #171717;
+  --color-bg-3: #222;
+  --color-primary: #fff;
+  --color-text: #a3a3a3;
+  --color-divider: #343434;
+  --color-success: rgb(26, 198, 103);
+  --color-error: rgb(207, 71, 13);
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 40px;
+  --space-xxl: 64px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg-1);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-primary);
+}
+
+input {
+  background-color: var(--color-bg-3);
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-divider);
+  color: var(--color-primary);
+}
+
+/* Buttons */
+
+button {
+  padding: var(--space-xs);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-1);
+}
+
+.button-tertiary {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.row-gap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.row-gap-xs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.row-no-gap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
+.row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message {
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  padding: var(--space-sm);
+}
+
+.success {
+  border: 1px solid var(--color-success);
+}
+.error {
+  border: 1px solid var(--color-error);
+}
+
+.tab-button {
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.selected {
+  background-color: #ffffff1a;
+}
+.teritrary {
+  background-color: transparent;
+  border: none;
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-divider);
+  color: var(--color-primary);
+}
+
+label {
+  color: var(--color-primary);
+}
+
+.column-xs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.column-md {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* MODALS */
+
+#modal-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+}
+
+.modal {
+  background-color: transparent;
+  padding: var(--space-xl);
+  width: 50%;
+}
+
+.task-input {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+.task-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.input-xl {
+  font-size: 3rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 1px solid var(--color-divider);
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.input-xl:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.modal-controls {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-xs);
+}
+
+.modal-content {
+  margin: auto 0;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--color-bg-2);
+  border-right: 1px solid var(--color-divider);
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+.tasks-container {
+  flex: 4;
+  padding: var(--space-md) var(--space-xxl);
+}
+
+.task {
+  padding: var(--space-xs) 0;
+}
+
+.tasks {
+  padding: var(--space-xl) 0;
+}
+
+.button-secondary:hover {
+  background-color: #ffffff20;
+}
+
+.checkbox-wrapper {
+  cursor: pointer;
+  padding: var(--space-xs);
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
